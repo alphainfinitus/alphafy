@@ -16,10 +16,10 @@ if [ ! -d "$HOME/bin" ]; then
     mkdir "$HOME/bin"
 fi
 
-curl https://gist.githubusercontent.com/SwapnilSoni1999/e163a8c380e1cdfa65cecbf71972a579/raw/c270edd7634a88f710a735f4a5ac4cb93ad50b11/termux-url-opener-spotifydl > "$HOME/bin/termux-url-opener"
-
 echo "[ aplhafy ] Setting up storage..."
 termux-setup-storage
+
+curl https://raw.githubusercontent.com/alphainfinitus/alphafy/master/tools/termux-url-opener > "$HOME/bin/termux-url-opener"
 
 echo "Sucess!"
 echo "You can now share song from Spotify App to Termux and Music will be downloaded."

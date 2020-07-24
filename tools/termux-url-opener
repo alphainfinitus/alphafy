@@ -8,19 +8,25 @@ clear
 # Check if its spotify URL or not.
 # if it is then execute spotifydl command to download.
 
-echo $URL
-
 if [[ $URL == *"open.spotify.com"* ]]; then
     SONG_DIR="$HOME/storage/shared/songs" #for Termux only
     NODE_ENV=$(which node)
     SPOTIFYDL=$(which spotifydl)
 
-    echo "Alphafy starting..."
+    echo "Alphafy started"
+
     # check if directory exist or not
+    echo "checking if directory exists"
+
     if [[ ! -d $SONG_DIR ]]; then
         # directory doesn't exist create it for use.
+        echo "directory doesn't exist"
         mkdir $SONG_DIR
+        echo "directory created"
     fi
+
+    echo "starting download process"
+
     # Download the song to song directory.
     $NODE_ENV $SPOTIFYDL $URL -o $SONG_DIR
 
