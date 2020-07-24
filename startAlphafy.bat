@@ -1,0 +1,1 @@
+start cmd /k echo Alphafy Usage : alphafy link
